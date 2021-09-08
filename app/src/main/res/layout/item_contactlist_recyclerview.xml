@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="contact"
+            type="com.hashpeak.bpdbcontacts.models.Contacts" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffDDDDDD"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="5dp"
+
+
+        >
+<!--        app:cardUseCompatPadding="true"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/profileicon"
+                android:elevation="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_profile_pic"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/txtdesignition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@{contact.designition}"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/profileicon"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Sr. Engineer"
+                android:maxLines="2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtoffice"
+                tools:text="Tanore Distribution Office"
+                android:text="@{contact.office}"
+                android:layout_below="@+id/txtdesignition"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/profileicon"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtzone"
+                tools:text="Rajshahi"
+                android:text="@{contact.zone}"
+                android:layout_below="@+id/txtoffice"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/profileicon"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_phone_1"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtzone"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/profileicon">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/phone"
+                    android:contentDescription="phone"
+                    android:scaleType="fitCenter"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_phone"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@{contact.phone_1}"
+                    android:layout_marginStart="3dp"
+                    android:id="@+id/txtSPhone1"
+                    android:textStyle="bold"
+                    tools:text="01912188731"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_phone_2"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layout_phone_1"
+                android:layout_marginStart="3dp"
+                android:layout_toEndOf="@+id/profileicon">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/phone2"
+                    android:contentDescription="phone"
+                    android:scaleType="fitCenter"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_phone"
+                    android:layout_gravity="center_horizontal"
+                    app:goneIfNotExists="@{contact.phone_2}"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@{contact.phone_2}"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/txtSPhone2"
+                    android:textStyle="bold"
+                    tools:text="01912188731"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
