@@ -18,8 +18,6 @@
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="5dp"
-
-
         >
 <!--        app:cardUseCompatPadding="true"-->
         <RelativeLayout
