@@ -2,6 +2,7 @@ package com.hashpeak.bpdbcontacts.network
 
 import com.hashpeak.bpdbcontacts.database.DatabaseContacts
 import com.hashpeak.bpdbcontacts.models.Contacts
+import com.hashpeak.bpdbcontacts.utils.phoneNumberMod
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
@@ -72,7 +73,7 @@ fun NetworkContactsContainer.asDatabaseModel():Array<DatabaseContacts>{
             designition = it.designition,
             office = it.office,
             zone = it.zone,
-            phone_1 = it.phone_1,
+            phone_1 = phoneNumberMod(it.phone_1),
             phone_2 = it.phone_2
         )
     }.toTypedArray()

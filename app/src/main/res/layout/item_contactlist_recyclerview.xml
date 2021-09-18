@@ -101,7 +101,8 @@
                     android:layout_marginStart="3dp"
                     android:id="@+id/txtSPhone1"
                     android:textStyle="bold"
-                    tools:text="01912188731"/>
+                    tools:text="01912188731"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -111,7 +112,8 @@
                 android:orientation="horizontal"
                 android:layout_below="@+id/layout_phone_1"
                 android:layout_marginStart="3dp"
-                android:layout_toEndOf="@+id/profileicon">
+                android:layout_toEndOf="@+id/profileicon"
+                app:goneIfNotExists="@{contact.phone_2}">
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
@@ -123,7 +125,7 @@
                     android:layout_marginTop="2dp"
                     android:src="@drawable/ic_phone"
                     android:layout_gravity="center_horizontal"
-                    app:goneIfNotExists="@{contact.phone_2}"
+
                     />
                 <TextView
                     android:layout_width="match_parent"
@@ -133,7 +135,9 @@
                     android:layout_marginStart="8dp"
                     android:id="@+id/txtSPhone2"
                     android:textStyle="bold"
-                    tools:text="01912188731"/>
+                    tools:text="01912188731"
+
+                    />
             </LinearLayout>
 
 

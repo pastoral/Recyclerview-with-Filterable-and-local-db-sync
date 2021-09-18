@@ -2,6 +2,7 @@ package com.hashpeak.bpdbcontacts.bindings
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -26,6 +27,16 @@ fun setImageUrl(imageView: ImageView, url: String) {
     Glide.with(imageView.context).load(url).into(imageView)
 }
 
+
+//@BindingAdapter("phoneCorrection")
+//fun banglaPhoneCorrection(txtView: TextView, str: String) {
+//    var words = str.toString().trim()
+//    val numberOfInputWords = str.split("\\s+".toRegex()).size
+//    if (numberOfInputWords<11){
+//        words = "0".plus(str)
+//    }
+//    txtView.text = words
+//}
 
 @BindingAdapter("goneIfNotExists")
 fun goneIfNotExists(view: View, it: Any?) {
